@@ -7,8 +7,8 @@ import org.springframework.stereotype.Controller;
 
 @Controller
 public class BaseController {
-    @Autowired
-    public IUserService userServiceImpl;
+//    @Autowired
+//    public IUserService userServiceImpl;
     @Autowired
     public RedisService redisService;
 //    @Autowired

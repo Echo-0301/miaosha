@@ -1,19 +1,22 @@
 package com.example.demo.service.base;
 
-import com.example.demo.dao.*;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import com.example.demo.util.ServerResponse;
 
-@Service
-public class BaseService {
-//    @Autowired
-//    public ProductMapper productMapper;
-    @Autowired
-    public UserMapper userMapper;
-//    @Autowired
-//    public OrderMapper orderMapper;
-//    @Autowired
-//    public CategoryMapper categoryMapper;
-//    @Autowired
-//    public ShippingMapper shippingMapper;
+public interface BaseService<T> {
+
+    public ServerResponse insert(T t);
+
+    public ServerResponse delete(int id);
+
+    public ServerResponse update(T t);
+
+    public ServerResponse get(int id);
+
+    public ServerResponse findAll();
+
+    public int getCountById(int id);
+
+    public ServerResponse getyName(String name);
+
+
 }
